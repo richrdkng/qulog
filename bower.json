@@ -1,0 +1,11 @@
+{
+  "name": "quicklog",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {},
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test"
+  ]
+}

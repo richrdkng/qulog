@@ -1,0 +1,8 @@
+# WebStorm directory
+.idea
+
+# Dependency directory
+node_modules
+
+# Project notes
+PROJECT_NOTES
