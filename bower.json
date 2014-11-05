@@ -28,8 +28,9 @@
     "test",
     "*.yml",
     ".gitignore",
+    ".gitattributes",
+    ".jshintrc",
     "Gruntfile*",
-    "package.json",
     "*.json"
   ],
   "dependencies": {},

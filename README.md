@@ -41,19 +41,19 @@ Aiming the convenience and favours of developers, turning on and off the logging
 
 By default, qulog is __turned on__. (qulog.on === __true__)
 
-### In Node.js
+__In Node.js__
 ```javascript
     var qulog = require("./node_modules/qulog");
 ```
-### In Browser (NPM)
+__In Browser (NPM)__
 ```html
     <script src="node_modules/qulog/qulog.js"></script>
 ```
-### In Browser (Bower)
+__In Browser (Bower)__
 ```html
     <script src="bower_components/qulog/qulog.js"></script>
 ```
-### In Browser (Require.js)
+__In Browser (Require.js)__
 ```html
     <script>
         require(["scripts/qulog"], function(qulog) {
@@ -61,13 +61,13 @@ By default, qulog is __turned on__. (qulog.on === __true__)
         });
     </script>
 ```
-### In Browser (Directly downloaded source)
+__In Browser (Directly downloaded source)__
 ```html
     <script src="scripts/qulog.js"></script>
 ```
-Somewhere in the code:
+In the code:
 ----------------------
-### During development & testing:
+__During development & testing:__
 ```javascript
     /* after assigned qulog to a variable called "log" */
     function testFunctionality() {
@@ -76,7 +76,7 @@ Somewhere in the code:
         /* Do logic afterwards */
     };
 ```
-### Turn off output to console:
+__Turn off output to console:__
 ```javascript
     /* after assigned qulog to variable called "log" */
     log.on = false; 
@@ -87,7 +87,7 @@ Somewhere in the code:
         /* Do logic afterwards */
     };
 ```
-### Using other functions for achieving the same functionality (toggle-pairs)
+__Using other functions for achieving the same functionality (toggle-pairs)__
 ```javascript
     /* after assigned qulog to variable called "log" */
 
@@ -114,7 +114,7 @@ Somewhere in the code:
         /* Do logic afterwards */
     };
 ```
-### In Internet Explorer 8 and Below:
+__In Internet Explorer 8 and Below:__
 ```javascript
     /* after assigned qulog to variable called "log" */
     

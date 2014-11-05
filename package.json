@@ -1,7 +1,7 @@
 {
   "name": "qulog",
   "description": "A fast, simple, UMD, cross-browser way to use console.log during development & testing.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/richard-kng/qulog",
   "author": "Richard KnG <richrdkng@gmail.com> (https://github.com/richard-kng)",
   "repository": {
@@ -12,7 +12,7 @@
     "url": "https://github.com/richard-kng/qulog/issues"
   },
   "license": "MIT",
-  "main": "./lib/qulog",
+  "main": "qulog",
   "scripts": {
     "build": "npm install && grunt build",
     "test": "grunt --verbose"
