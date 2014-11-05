@@ -1,8 +1,8 @@
-Qulog
+Qulog [![Build Status](https://travis-ci.org/richard-kng/qulog.svg?branch=master)](https://travis-ci.org/richard-kng/qulog)
 =====
-(Quickly Usable Log)
+(Quickly Usable Log) ["que-log"]
 
-A fast, simple, UMD, cross-browser way to use console.log during development & testing.
+__A fast, simple, UMD, cross-browser way to use console.log during development & testing.__
 
 To support this project, you can at [the support page](http://richard-kng.github.io/support/) by supporting the developer.
 
@@ -11,13 +11,13 @@ Getting Started
 
 __NPM__ ([What is NPM?](https://docs.nodejitsu.com/articles/getting-started/npm/what-is-npm) [What is Grunt?](http://gruntjs.com/))
 
-    npm install quicklog --save-dev
+    npm install qulog --save-dev
 
 __Bower__ ([What is Bower?](http://bower.io/))
 
-    bower install quicklog --save-dev
+    bower install qulog --save-dev
 
-__Download directly__ __(Do not link this directly on your site, the file sent with a plain/text header and can cause loading problems)__
+__Download directly__ __(Do not link this directly on your site, the file is sent with a plain/text header and can cause loading problems)__
 
 - [qulog.js](https://raw.githubusercontent.com/richard-kng/qulog/master/lib/qulog.js)
 
@@ -27,76 +27,86 @@ Aiming the convenience and favours of developers, turning on and off the logging
 
 | Property    | Functionality | Example |
 | ----------- | ------------- | ------- |
-| .on         | turns on/off output to console (true/false) | __turns on__ output to console: quicklog.on = __true__ |
-| .off        | turns off/on output to console (true/false) | __turns off__ output to console: quicklog.off = __true__ |
-| .debug      | __same as .on__                             | __turns on__ output to console: quicklog.debug = __true__ |
-| .production | __same as .off__                            | __turns off__ output to console: quicklog.production = __true__ |
+| .on         | turns __on__ or __off__ output to console (true/false) | qulog.on = __true__ __OR__ qulog.on = __false__ |
+| .off        | turns __off__ or __on__ output to console (true/false) | qulog.off = __true__ __OR__ qulog.off = __false__ |
+| .debug      | __same as .on__                                        | qulog.debug = __true__ __OR__ qulog.debug = __false__ |
+| .production | __same as .off__                                       | qulog.production = __true__ __OR__ qulog.production = __false__ |
 
 | Function    | Functionality | Example |
 | ----------- | ------------- | ------- |
-| .setOn(true/false)         | turns on/off output to console | __turns on__ output to console: quicklog.setOn(true) |
-| .setOff(true/false)        | turns off/on output to console | __turns off__ output to console: quicklog.setOff(true) |
-| .setDebug(true/false)      | __same as .setOn()__           | __turns on__ output to console: quicklog.setDebug(true) |
-| .setProduction(true/false) | __same as .setOff()__          | __turns off__ output to console: quicklog.setProduction(true) |
+| .setOn(true/false)         | turns __on__ or __off__ output to console (true/false) | qulog.setOn(true) __OR__ qulog.setOn(false) |
+| .setOff(true/false)        | turns __off__ or __on__ output to console (true/false) | qulog.setOff(true) __OR__ qulog.setOff(false) |
+| .setDebug(true/false)      | __same as .setOn()__                                   | qulog.setDebug(true) __OR__ qulog.setDebug(false) |
+| .setProduction(true/false) | __same as .setOff()__                                  | qulog.setProduction(true) __OR__ qulog.setProduction(false) |
+
+By default, qulog is __turned on__. (qulog.on === __true__)
 
 ### In Node.js
+```javascript
+    var qulog = require("./node_modules/qulog");
+```
 ### In Browser (NPM)
+```html
+    <script src="node_modules/qulog/qulog.js"></script>
+```
 ### In Browser (Bower)
-### In Browser (Downloaded source)
-
-### Somewhere in the code:
-During development & testing:
+```html
+    <script src="bower_components/qulog/qulog.js"></script>
+```
+### In Browser (Require.js)
+```html
+    <script>
+        require(["scripts/qulog"], function(qulog) {
+                /* qulog is accessible from now on */
+        });
+    </script>
+```
+### In Browser (Directly downloaded source)
+```html
+    <script src="scripts/qulog.js"></script>
+```
+Somewhere in the code:
+----------------------
+### During development & testing:
 ```javascript
-    /* after assigned quicklog to a variable called "log" */
-
+    /* after assigned qulog to a variable called "log" */
     function testFunctionality() {
         /* This below should appear in console */
         log("-> testFunctionality was called");
         /* Do logic afterwards */
     };
 ```
-
-Turn off output to console:
+### Turn off output to console:
 ```javascript
-    /* after assigned quicklog to variable called "log" */
-    
+    /* after assigned qulog to variable called "log" */
     log.on = false; 
 
     function testFunctionality() {
-        /* This below should NOT appear in console */
+        /* This below SHOULD NOT appear in console */
         log("-> testFunctionality was called");
         /* Do logic afterwards */
     };
 ```
-
-Using other functions for achieving the same functionality (toggle-pairs)
+### Using other functions for achieving the same functionality (toggle-pairs)
 ```javascript
-    /* after assigned quicklog to variable called "log" */
-    
+    /* after assigned qulog to variable called "log" */
+
     /* These will turn off output to console
-       and they are functionally equivalent */
-    log.on = false; 
+       and they are functionally equivalent, toggle-pairs */
+    log.on = false; /* or */ log.debug = false;
     /* or */
-    log.debug = false;
-    /* or */
-    log.off = true;
-    /* or */
-    log.production = true;
+    log.off = true; /* or */ log.production = true;
     
     function testFunctionality() {
-        /* This below should NOT appear in console */
+        /* This below SHOULD NOT appear in console */
         log("-> testFunctionality was called");
         /* Do logic afterwards */
     };
     
-    /* To turn on again */
-    log.on = true;     
+    /* To turn on output to console again */
+    log.on = true; /* or */ log.debug = true;
     /* or */
-    log.debug = true;
-    /* or */
-    log.off = false;
-    /* or */
-    log.production = false;     
+    log.off = false; /* or */ log.production = false;
 
     function testFunctionality() {
         /* This below should appear in console */
@@ -104,24 +114,19 @@ Using other functions for achieving the same functionality (toggle-pairs)
         /* Do logic afterwards */
     };
 ```
-
-### In IE8 and lower:
+### In Internet Explorer 8 and Below:
 ```javascript
-    /* after assigned quicklog to variable called "log" */
+    /* after assigned qulog to variable called "log" */
     
     /* Properties (.on/.off/.debug/.production)
        are not available in IE8 and lower
        Use instead the appropriate functions */
-    log.setOn(false);  
+    log.setOn(false); /* or */ log.setDebug(false);
     /* or */
-    log.setDebug(false);
-    /* or */
-    log.setOff(true);    
-    /* or */
-    log.setProduction(true);
+    log.setOff(true); /* or */ log.setProduction(true);
 
     function testFunctionality() {
-        /* This below should NOT appear in console */
+        /* This below SHOULD NOT appear in console */
         log("-> testFunctionality was called");
         /* Do logic afterwards */
     };
@@ -136,13 +141,13 @@ As this tool is intended to use with and tested too with IE9+ and with modern br
 
 Suggestions, Ideas & Requests
 -----------------------------
-Post any occurring suggestions, useful ideas and requests to the project's issue page under the __suggestion/idea/request__ label by clicking [here](https://github.com/richard-kng/quicklog/labels/suggestion/idea/request).
+Post any occurring suggestions, useful ideas and requests to the project's issue page under the __suggestion/idea/request__ label by clicking [here](https://github.com/richard-kng/qulog/labels/suggestion/idea/request).
 
  - Constructive criticism is encouraged and welcomed by contacting the developer or using GitHub.
 
 Issues/Bugs
 -----------
-In case of any occurring issues and/or bugs, post on the project's [issues](https://github.com/richard-kng/quicklog/issues) page with appropriate label(s).
+In case of any occurring issues and/or bugs, post on the project's [issues](https://github.com/richard-kng/qulog/issues) page with appropriate label(s).
 
 Support
 -------
