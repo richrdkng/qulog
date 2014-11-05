@@ -44,6 +44,10 @@ module.exports = function(grunt) {
             main: {
                 src: "src/<%= pkg.name %>.js",
                 dest: 'lib/<%= pkg.name %>.js'
+            },
+            sub: {
+                src: "src/<%= pkg.name %>.js",
+                dest: './<%= pkg.name %>.js'
             }
         },
         usebanner: {
@@ -54,7 +58,7 @@ module.exports = function(grunt) {
                 linebreak: true
               },
               files: {
-                src: "lib/<%= pkg.name %>.js"
+                src: [ "lib/<%= pkg.name %>.js", "./<%= pkg.name %>.js" ]
               }
             },
             minimized: {
