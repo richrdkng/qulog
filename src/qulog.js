@@ -9,7 +9,7 @@
 
     // For using in the browser directly
     } else {
-        root.quicklog = factory();
+        root.qulog = factory();
     }
 }(this, function factory() {
     "use strict";
@@ -22,14 +22,14 @@
     // For modern browsers (and IE 9+) and Node.js
     if(typeof console.log.apply === "function") {
         isModern = true;
-        logFunc = function quicklog() {
+        logFunc = function qulog() {
             if(isDebug) {
                 console.log.apply(console, arguments);
             }
         };
     // For IE8 and lower
     } else {
-        logFunc = function quicklog() {
+        logFunc = function qulog() {
             if(isDebug) {
                 // In IE8 a dummy array is used along with Function.prototype to implement
                 // proper console.log functionality

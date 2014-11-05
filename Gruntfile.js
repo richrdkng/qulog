@@ -1,7 +1,7 @@
 "use strict";
 module.exports = function(grunt) {
     var licenseMainLine
-            = "Quicklog <%= pkg.version %> Copyright (c) 2014 \"Richard KnG\" Richárd Szakács",
+            = "Qulog <%= pkg.version %> Copyright (c) 2014 \"Richard KnG\" Richárd Szakács",
         licenseItselfLine
             = "Licensed under the MIT license.",
         licenseForDetailsLine

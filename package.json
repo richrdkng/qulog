@@ -1,27 +1,18 @@
 {
-  "name": "quicklog",
+  "name": "qulog",
   "description": "A fast, simple, UMD, cross-browser way to use console.log during development & testing.",
   "version": "1.0.0",
-  "homepage": "https://github.com/richard-kng/quicklog",
-  "author": {
-    "name": "Richard KnG",
-    "email": "richrdkng@gmail.com",
-    "url": "https://github.com/richard-kng"
-  },
+  "homepage": "https://github.com/richard-kng/qulog",
+  "author": "Richard KnG <richrdkng@gmail.com> (https://github.com/richard-kng)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/richard-kng/quicklog.git"
+    "url": "https://github.com/richard-kng/qulog.git"
   },
   "bugs": {
-    "url": "https://github.com/richard-kng/quicklog/issues"
+    "url": "https://github.com/richard-kng/qulog/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/richard-kng/quicklog/blob/master/LICENSE-MIT"
-    }
-  ],
-  "main": "./lib/quicklog",
+  "license": "MIT",
+  "main": "./lib/qulog",
   "scripts": {
     "build": "npm install && grunt build",
     "test": "grunt --verbose"
@@ -42,7 +33,7 @@
     "console",
     "log",
     "quick",
-    "quicklog",
+    "qulog",
     "javascript",
     "js",
     "requirejs",
@@ -53,5 +44,8 @@
     "dev",
     "tool",
     "helper"
-  ]
+  ],
+  "directories": {
+    "test": "test"
+  }
 }

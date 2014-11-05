@@ -6,3 +6,6 @@ node_modules
 
 # Project notes
 PROJECT_NOTES
+
+# NPM Debug log
+npm-debug.log

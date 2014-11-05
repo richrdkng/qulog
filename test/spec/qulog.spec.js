@@ -1,20 +1,20 @@
 (function (root, factory) {
     if (typeof module === 'object' && module.exports) {
-        factory(require('../../src/quicklog')); // Node.js/CommonJS
+        factory(require('../../src/qulog')); // Node.js/CommonJS
     } else if (typeof define === 'function' && define.amd) {
-        define(['../../src/quicklog'], factory); // AMD
+        define(['../../src/qulog'], factory); // AMD
     } else {
-        factory(root.quicklog); // Browser globals
+        factory(root.qulog); // Browser globals
     }
 }(this, function factory(moduleName) {
     var log = moduleName;
 
-    describe("if quicklog exists", function() {
+    describe("if qulog exists", function() {
         it('-> have to return "function"', function() {
             expect(typeof log).toEqual("function");
         });
     });
-    describe("by default setup quicklog", function() {
+    describe("by default setup qulog", function() {
         it('-> have to return "true" for .on/.getOn()', function() {
             expect(log.on === true).toEqual(true);
             expect(log.getOn() === true).toEqual(true);

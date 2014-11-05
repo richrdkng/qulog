@@ -1,5 +1,7 @@
-Quicklog
-========
+Qulog
+=====
+(Quickly Usable Log)
+
 A fast, simple, UMD, cross-browser way to use console.log during development & testing.
 
 To support this project, you can at [the support page](http://richard-kng.github.io/support/) by supporting the developer.
@@ -17,7 +19,7 @@ __Bower__ ([What is Bower?](http://bower.io/))
 
 __Download directly__ __(Do not link this directly on your site, the file sent with a plain/text header and can cause loading problems)__
 
-- [quicklog.js](https://raw.githubusercontent.com/richard-kng/quicklog/master/lib/quicklog.js)
+- [qulog.js](https://raw.githubusercontent.com/richard-kng/qulog/master/lib/qulog.js)
 
 API & Usage
 -----------
@@ -25,17 +27,17 @@ Aiming the convenience and favours of developers, turning on and off the logging
 
 | Property    | Functionality | Example |
 | ----------- | ------------- | ------- |
-| .on         | turns on/off output to console (true/false) | quicklog.on = true // __turns on__ output to console |
-| .off        | turns off/on output to console (true/false) | quicklog.off = true // __turns off__ output to console |
-| .debug      | __same as .on__                             | quicklog.debug = true // __turns on__ output to console |
-| .production | __same as .off__                            | quicklog.production = true // __turns off__ output to console |
+| .on         | turns on/off output to console (true/false) | __turns on__ output to console: quicklog.on = __true__ |
+| .off        | turns off/on output to console (true/false) | __turns off__ output to console: quicklog.off = __true__ |
+| .debug      | __same as .on__                             | __turns on__ output to console: quicklog.debug = __true__ |
+| .production | __same as .off__                            | __turns off__ output to console: quicklog.production = __true__ |
 
 | Function    | Functionality | Example |
 | ----------- | ------------- | ------- |
-| .setOn(true/false)         | turns on/off output to console | quicklog.setOn(true) // __turns on__ output to console |
-| .setOff(true/false)        | turns off/on output to console | quicklog.setOff(true) // __turns off__ output to console |
-| .setDebug(true/false)      | __same as .setOn()__           | quicklog.setDebug(true) // __turns on__ output to console |
-| .setProduction(true/false) | __same as .setOff()__          | quicklog.setProduction(true) // __turns off__ output to console |
+| .setOn(true/false)         | turns on/off output to console | __turns on__ output to console: quicklog.setOn(true) |
+| .setOff(true/false)        | turns off/on output to console | __turns off__ output to console: quicklog.setOff(true) |
+| .setDebug(true/false)      | __same as .setOn()__           | __turns on__ output to console: quicklog.setDebug(true) |
+| .setProduction(true/false) | __same as .setOff()__          | __turns off__ output to console: quicklog.setProduction(true) |
 
 ### In Node.js
 ### In Browser (NPM)
@@ -45,83 +47,83 @@ Aiming the convenience and favours of developers, turning on and off the logging
 ### Somewhere in the code:
 During development & testing:
 ```javascript
-    // after assigned quicklog to a variable called "log"
+    /* after assigned quicklog to a variable called "log" */
 
     function testFunctionality() {
-        // This below should appear in console
+        /* This below should appear in console */
         log("-> testFunctionality was called");
-        // Do logic afterwards
+        /* Do logic afterwards */
     };
 ```
 
 Turn off output to console:
 ```javascript
-    // after assigned quicklog to variable called "log"
+    /* after assigned quicklog to variable called "log" */
     
     log.on = false; 
 
     function testFunctionality() {
-        // This below should NOT appear in console
+        /* This below should NOT appear in console */
         log("-> testFunctionality was called");
-        // Do logic afterwards
+        /* Do logic afterwards */
     };
 ```
 
 Using other functions for achieving the same functionality (toggle-pairs)
 ```javascript
-    // after assigned quicklog to variable called "log"
+    /* after assigned quicklog to variable called "log" */
     
-    // These will turn off output to console 
-    // and they are functionally equivalent
+    /* These will turn off output to console
+       and they are functionally equivalent */
     log.on = false; 
-    // or
+    /* or */
     log.debug = false;
-    // or
+    /* or */
     log.off = true;
-    // or
+    /* or */
     log.production = true;
     
     function testFunctionality() {
-        // This below should NOT appear in console
+        /* This below should NOT appear in console */
         log("-> testFunctionality was called");
-        // Do logic afterwards
+        /* Do logic afterwards */
     };
     
-    // To turn on again
+    /* To turn on again */
     log.on = true;     
-    // or
+    /* or */
     log.debug = true;
-    // or
+    /* or */
     log.off = false;
-    // or
+    /* or */
     log.production = false;     
 
     function testFunctionality() {
-        // This below should appear in console
+        /* This below should appear in console */
         log("-> testFunctionality was called");
-        // Do logic afterwards
+        /* Do logic afterwards */
     };
 ```
 
 ### In IE8 and lower:
 ```javascript
-    // after assigned quicklog to variable called "log"
+    /* after assigned quicklog to variable called "log" */
     
-    // Properties (.on/.off/.debug/.production)
-    // are not available in IE8 and lower
-    // Use instead the appropriate functions
+    /* Properties (.on/.off/.debug/.production)
+       are not available in IE8 and lower
+       Use instead the appropriate functions */
     log.setOn(false);  
-    // or
+    /* or */
     log.setDebug(false);
-    // or
+    /* or */
     log.setOff(true);    
-    // or
+    /* or */
     log.setProduction(true);
 
     function testFunctionality() {
-        // This below should NOT appear in console
+        /* This below should NOT appear in console */
         log("-> testFunctionality was called");
-        // Do logic afterwards
+        /* Do logic afterwards */
     };
 ```
 
@@ -136,7 +138,7 @@ Suggestions, Ideas & Requests
 -----------------------------
 Post any occurring suggestions, useful ideas and requests to the project's issue page under the __suggestion/idea/request__ label by clicking [here](https://github.com/richard-kng/quicklog/labels/suggestion/idea/request).
 
- - Constructive criticism is encouraged and welcomed by contacting the developer.
+ - Constructive criticism is encouraged and welcomed by contacting the developer or using GitHub.
 
 Issues/Bugs
 -----------
@@ -154,7 +156,7 @@ In the spirit of open source software development, this project is always open t
 
 License
 -------
-Copyright (c) 2014 "Richard KnG" Richárd Szakács. Licensed under the MIT license.
+Copyright (c) 2014 "Richard KnG" Richárd Szakács. __Licensed under the MIT license__.
 
 The license mentioned above applies to all parts of this software except as
 documented below
