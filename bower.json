@@ -21,13 +21,16 @@
     "helper"
   ],
   "authors": ["Richard KnG <richrdkng@gmail.com> (https://github.com/richard-kng)"],
-  "main": "./lib/qulog.js",
+  "main": "qulog.js",
   "ignore": [
+    "lib",
     "node_modules",
+    "src",
     "test",
     "*.yml",
     ".gitignore",
-    "Gruntfile.js",
+    "Gruntfile*",
+    "package.json",
     "*.json"
   ],
   "dependencies": {},
