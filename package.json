@@ -1,7 +1,7 @@
 {
   "name": "qulog",
   "description": "A fast, simple, UMD, cross-browser way to use console.log during development & testing.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "homepage": "https://github.com/richard-kng/qulog",
   "author": "Richard KnG <richrdkng@gmail.com> (https://github.com/richard-kng)",
   "repository": {
