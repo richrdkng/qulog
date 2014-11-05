@@ -1,11 +1,36 @@
 {
   "name": "qulog",
+  "description": "A fast, simple, UMD, cross-browser way to use console.log during development & testing.",
   "version": "1.0.0",
+  "homepage": "https://github.com/richard-kng/qulog",
+  "repository": "git://github.com/richard-kng/qulog.git",
+  "keywords": [
+    "console",
+    "log",
+    "quick",
+    "qulog",
+    "javascript",
+    "js",
+    "requirejs",
+    "commonjs",
+    "amd",
+    "umd",
+    "development",
+    "dev",
+    "tool",
+    "helper"
+  ],
+  "authors": ["Richard KnG <richrdkng@gmail.com> (https://github.com/richard-kng)"],
+  "main": "./lib/qulog",
+  "ignore": [
+    "node_modules",
+    "test",
+    "*.yml",
+    ".gitignore",
+    "Gruntfile.js",
+    "*.json"
+  ],
   "dependencies": {},
   "devDependencies": {},
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "test"
-  ]
+  "license": ["MIT"]
 }
