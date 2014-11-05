@@ -21,7 +21,7 @@
     "helper"
   ],
   "authors": ["Richard KnG <richrdkng@gmail.com> (https://github.com/richard-kng)"],
-  "main": "./lib/qulog",
+  "main": "./lib/qulog.js",
   "ignore": [
     "node_modules",
     "test",
