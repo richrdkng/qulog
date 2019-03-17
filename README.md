@@ -1,6 +1,6 @@
 Qulog [![Build Status](https://travis-ci.org/richard-kng/qulog.svg?branch=master)](https://travis-ci.org/richard-kng/qulog)
 =====
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/richard-kng/qulog?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/richard-kng/qulog?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Greenkeeper badge](https://badges.greenkeeper.io/richrdkng/qulog.svg)](https://greenkeeper.io/)
 (Quickly Usable Log) ["que-log"]
 
 __A fast, simple, UMD, cross-browser way to use console.log during development & testing.__
